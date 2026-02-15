@@ -1,0 +1,79 @@
+.student-container{
+    display: flex;
+    flex-direction: column;
+    height: 210vh;
+    width: 80%;
+    background-color: #fff4e6;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 140px;
+    margin-right: 170px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.student-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.student-container:hover {
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.student-guidance{
+    margin: 20px;
+    border-radius: 20px;
+    padding: 40px;
+    grid-column: span 2;
+    background-color: rgba(245, 250, 255, 0.65);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+.student-guidance:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+    cursor: pointer;
+    background-color: thistle;
+}
+h1{
+    color: #1e3a5f;
+    margin-left: 20px;
+}
+body{
+    background-color: #1e3a5f;
+}
+.student-emergency-contacts{
+    margin: 20px;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: rgba(245, 250, 255, 0.65);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+.student-emergency-contacts:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+    cursor: pointer;
+    background-color: thistle;
+}
+.student-announcements{
+    margin: 20px;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: rgba(245, 250, 255, 0.65);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+.student-announcements:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+    cursor: pointer;
+    background-color: thistle;
+}

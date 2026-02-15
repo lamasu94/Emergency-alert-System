@@ -1,0 +1,78 @@
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    width: 80%;
+    background-color: rgba(24, 34, 53, 0.5);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 110px;
+    margin-right: 170px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.admin-container:hover {
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: transparent;
+}
+body {
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../assets/loginbackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+.admin-header-container{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 20px;
+    color :whitesmoke;
+}
+.admin-btn{
+    background-color: darkslategrey;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.admin-btn:hover{
+    background-color: slategray;
+}
+.user-management {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    padding-left: 10px;
+    background-color: rgba(245, 250, 255, 0.65);
+    transition: all 0.3s ease;
+}
+.user-management:hover, .alert-category-management:hover {
+  background-color: whitesmoke;
+   transform: scale(1.02);
+   box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+   cursor: pointer;
+}
+
+.alert-category-management{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    padding-left: 20px;
+    background-color: rgba(245, 250, 255, 0.65);
+    transition: all 0.3s ease;
+}
