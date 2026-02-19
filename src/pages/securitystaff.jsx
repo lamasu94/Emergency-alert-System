@@ -4,7 +4,9 @@ import ActiveAlertCard from "../component/activeAlertCard";
 function SecurityStaff(){
     return(
         <div className="security-container">
+            <div className="security-header">
             <h1>Welcome Jane !</h1>
+            </div>
             <div className="security-grid">
             <div className="form-container"> 
                 <form className="form">
@@ -20,8 +22,8 @@ function SecurityStaff(){
                     <input type="submit" className="btn" value="Submit"></input>
                 </form>
             </div>
-            <HistoryAlertCard />
             <ActiveAlertCard />
+            <HistoryAlertCard />
            </div>
         </div>
     )

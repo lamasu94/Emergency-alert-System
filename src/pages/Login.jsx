@@ -1,4 +1,5 @@
 import {useNavigate} from "react-router-dom";
+import illustration from "../assets/people.svg";
 import "../styles/Login.css";
 function Login(){
     const navigate = useNavigate();
@@ -13,8 +14,9 @@ function Login(){
        }
     }
     return(
-      
+     <div className="login-page"> 
         <div className="login-container">
+             <img src={illustration} alt="Login illustration" className="login-illustration" />
             <h1 className="login-header">Welcome to Campus's Emergency Alert System</h1>
             <h2 className="login-header2">Please log in to continue</h2>
             <form className="login-form" >
@@ -29,11 +31,15 @@ function Login(){
                     <option value="Admin">Admin</option>
                     <option value="Security">Security</option>
                 </select><br />
-                <button type="button" id="login-button" onClick={handleLogin}>Log in</button>
+                <button type="button" id="login-button" onClick={(e) => {
+                 e.preventDefault();
+                    handleLogin();
+                }}>
+                Log in</button>
             </form>
         
         </div>
-        
+      </div>  
     )
 }
 export default Login;

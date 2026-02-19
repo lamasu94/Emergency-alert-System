@@ -1,7 +1,7 @@
 .admin-container {
     display: flex;
     flex-direction: column;
-    height: 120vh;
+    height: 160vh;
     width: 80%;
     background-color: rgba(24, 34, 53, 0.5);
     margin-top: 50px;
@@ -25,18 +25,15 @@
     cursor: pointer;
     background-color: transparent;
 }
-body {
-    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../assets/loginbackground.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-}
+
 .admin-header-container{
     display: flex;
     margin-top: 10px;
     margin-left: 20px;
-    color :whitesmoke;
+    margin-right: 20px;
+    border-radius: 30px;
+    background-color:rgba(245, 250, 255, 0.65);
+    color : darkslategrey;
 }
 .admin-btn{
     background-color: darkslategrey;
