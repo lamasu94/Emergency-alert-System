@@ -1,12 +1,16 @@
 import HistoryAlertCard from "../component/historyAlertCard";
 import ActiveAlertCard from "../component/activeAlertCard";
 import "../styles/Adminstration.css";
+import SystemStatus from "../component/systemStatus";
 function Administration() {
 return(
     <div className="admin-container">
         <div className="admin-header-container">
         <h1 className="admin-header">Welcome John!</h1>
         </div>
+         <header>
+                <SystemStatus />
+        </header>
         <div className="dashboard-grid">
         <div className="user-management">
             <h2>User's Management</h2>
@@ -22,6 +26,7 @@ return(
         </div>
         <ActiveAlertCard />
         <HistoryAlertCard />
+    
         </div>
         
     </div>
