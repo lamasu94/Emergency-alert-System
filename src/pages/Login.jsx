@@ -17,8 +17,7 @@ function Login(){
      <div className="login-page"> 
         <div className="login-container">
              <img src={illustration} alt="Login illustration" className="login-illustration" />
-            <h1 className="login-header">Welcome to Campus's Emergency Alert System</h1>
-            <h2 className="login-header2">Please log in to continue</h2>
+            <h1 className="login-header">Welcome Back!</h1>
             <form className="login-form" >
                 <label htmlFor="Email" className="login-label">Email:</label><br />
                 <input type="email" className="login-input" name="Email" required /><br />

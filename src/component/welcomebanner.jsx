@@ -1,0 +1,97 @@
+import illustration from "../assets/dashboardbanner.svg";
+function WelcomeBanner() {
+
+  const activeAlerts = 3;
+
+  const systemMessage =
+    activeAlerts > 0
+      ? `Today you have ${activeAlerts} active alerts that need attention.`
+      : "All systems are operating normally.";
+
+  return (
+
+    <div className="
+  bg-gradient-to-r
+  from-[#1e3a5f]
+  via-[#2c5282]
+  to-[#3b82f6]
+  text-white
+  rounded-2xl
+  shadow-md
+  p-8
+  flex flex-col md:flex-row justify-between items-center gap-4
+">
+
+
+      {/* LEFT SIDE */}
+      <div className="text-white max-w-md">
+
+        <h2 className="text-2xl font-bold">
+          Hello John!
+        </h2>
+
+        <p className="mt-3 text-sm opacity-90">
+          {systemMessage}
+        </p>
+
+        <button className="
+          mt-5
+          bg-orange-700
+          hover:bg-orange-500
+          text-white
+          px-4
+          py-2
+          rounded-lg
+          text-sm
+          font-medium
+          transition
+        ">
+          View Alerts
+        </button>
+
+      </div>
+
+
+
+      {/* RIGHT SIDE */}
+      <div className="flex items-center space-x-6">
+
+
+        {/* GRAPH */}
+        <div className="flex items-end space-x-2 h-20">
+
+          <div className="w-2 h-8 bg-white/70 rounded"></div>
+          <div className="w-2 h-14 bg-white rounded"></div>
+          <div className="w-2 h-6 bg-white/70 rounded"></div>
+          <div className="w-2 h-16 bg-white rounded"></div>
+          <div className="w-2 h-10 bg-white/70 rounded"></div>
+
+        </div>
+
+
+        {/* ILLUSTRATION PLACEHOLDER */}
+        <div className="
+          w-32
+          h-24
+          bg-white/20
+          rounded-xl
+          flex
+          items-center
+          justify-center
+          text-white/80
+          text-xs
+        ">
+         <img src={illustration} alt="admin illustration" className="admin-illustration" />
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  );
+
+}
+
+export default WelcomeBanner;
