@@ -1,32 +1,29 @@
-import "../styles/SecurityStaff.css";
-import HistoryAlertCard from "../component/historyAlertCard";
-import ActiveAlertCard from "../component/activeAlertCard";
-function SecurityStaff(){
-    return(
-        <div className="security-container">
-            <div className="security-header">
-            <h1>Welcome Jane !</h1>
-            </div>
-            <div className="security-grid">
-            <div className="form-container"> 
-                <form className="form">
-                    <p><b>Incase of an emergency please fill the form: </b></p>
-                    <label htmlFor="emergency"><b>Emergency Category:</b></label><br></br>
-                    <input type="text" className="security-field" name="emergency"></input><br></br>
-                    <label htmlFor="location"><b>Location:</b></label><br></br>
-                    <input type="text" className="security-field" name="location"></input><br />
-                    <label htmlFor="Date & Time"><b>Date & Time:</b></label><br></br>
-                    <input type="datetime-local" className="security-field" name="datetime"></input><br></br>
-                    <label htmlFor="description"><b>Description:</b></label><br></br>
-                    <textarea className="security-field" name="description" rows="4" cols="50"></textarea><br></br>
-                    <input type="submit" className="btn" value="Submit"></input>
-                </form>
-            </div>
-            <ActiveAlertCard />
-            <HistoryAlertCard />
-           </div>
-        </div>
-    )
-}
+import Calendar from "../component/calender";
+import SecurityProfileCard from "../component/Securityprofile"; 
+import StatusCards from "../component/satutscard";
+import ActiveAlertsTable from "../component/activeAlertCard";
+import SecurityWelcomeBanner from "../component/securitywelcomebanner";
+function SecurityStaff() {
 
-export default SecurityStaff;
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/*left*/} 
+    <div className="col-span-1 md:col-span-2 space-y-6">    
+        <SecurityWelcomeBanner />
+        <StatusCards />
+        <ActiveAlertsTable />
+
+      </div>
+
+       {/* RIGHT */}
+      <div className="col-span-1 space-y-6 md:col-span-1">
+
+        <Calendar />
+        <SecurityProfileCard />
+
+      </div>
+    </div>
+
+  )
+}
+export default SecurityStaff;   

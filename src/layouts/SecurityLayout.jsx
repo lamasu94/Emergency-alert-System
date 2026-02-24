@@ -1,9 +1,9 @@
 import { Outlet, Link, useNavigate } from "react-router-dom";
-import adminsidebar from "../assets/adminsidebar.jpg";
-import maleAvatar from "../assets/maleAvatar.svg";
+import securitysidebar from "../assets/securitysidebar.jpg";
+import femaleAvatar from "../assets/femaleAvatar.svg";
 import {
   LayoutDashboard,
-  UserRound,
+  Bell,
   Settings,
   School,
   Menu,
@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-function AdminLayout() {
+function SecurityLayout() {
 
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -38,7 +38,7 @@ function AdminLayout() {
 
           md:translate-x-0 md:static
         `}
-        style={{ backgroundImage: `url(${adminsidebar})` }}
+        style={{ backgroundImage: `url(${securitysidebar})` }}
       >
 
         {/* CLOSE BUTTON (mobile only) */}
@@ -58,7 +58,7 @@ function AdminLayout() {
         <nav className="flex flex-col p-4 space-y-4">
 
           <Link
-            to="/admin/dashboard"
+            to="/security/securitystaff"
             onClick={() => setSidebarOpen(false)}
             className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/10 transition"
           >
@@ -67,16 +67,16 @@ function AdminLayout() {
           </Link>
 
           <Link
-            to="/admin/users"
+            to="/security/alerts"
             onClick={() => setSidebarOpen(false)}
             className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/10 transition"
           >
-            <UserRound size={20} />
-            Users
+            <Bell size={20} />
+            Alerts
           </Link>
 
           <Link
-            to="/admin/settings"
+            to="/security/settings"
             onClick={() => setSidebarOpen(false)}
             className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/10 transition"
           >
@@ -99,7 +99,7 @@ function AdminLayout() {
 
 
       {/* RIGHT SIDE */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col ">
 
         {/* NAVBAR */}
         <header className="h-16 bg-white shadow flex items-center justify-between px-4 md:px-6">
@@ -126,11 +126,11 @@ function AdminLayout() {
           <div className="flex items-center gap-3">
 
             <span className="hidden sm:block font-medium">
-              Welcome John
+              Welcome Jane
             </span>
 
             <img
-              src={maleAvatar}
+              src={femaleAvatar}
               alt="avatar"
               className="w-10 h-10 rounded-full object-cover"
             />
@@ -158,9 +158,10 @@ function AdminLayout() {
 
         {/* PAGE CONTENT */}
         <main className="flex-1 p-4 md:p-6 overflow-x-hidden">
-          <Outlet />
-        </main>
 
+          <Outlet />
+
+        </main>
 
       </div>
 
@@ -170,4 +171,4 @@ function AdminLayout() {
 
 }
 
-export default AdminLayout;
+export default SecurityLayout;
