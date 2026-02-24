@@ -8,20 +8,6 @@ function ActiveAlertsTable() {
       location: "Block A",
       time: "10:45 AM",
       status: "Active"
-    },
-    {
-      id: 2,
-      type: "Medical",
-      location: "Library",
-      time: "09:20 AM",
-      status: "Resolved"
-    },
-    {
-      id: 3,
-      type: "Security",
-      location: "Main Gate",
-      time: "08:10 AM",
-      status: "Resolved"
     }
   ];
 
@@ -47,7 +33,7 @@ function ActiveAlertsTable() {
       <div className="flex justify-between items-center mb-4">
 
         <h2 className="text-lg font-semibold">
-           Alerts
+           Active Alerts
         </h2>
 
       </div>

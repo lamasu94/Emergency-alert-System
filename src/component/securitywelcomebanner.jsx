@@ -1,6 +1,5 @@
-import illustration from "../assets/dashboardbanner.svg";
-import adminsidebar from "../assets/adminsidebar.jpg";
-function WelcomeBanner() {
+import illustration from "../assets/securitybanner.svg";
+function SecurityWelcomeBanner() {
 
   const activeAlerts = 3;
 
@@ -12,27 +11,22 @@ function WelcomeBanner() {
   return (
 
     <div className="
-  
+      bg-[url('/src/assets/securitysidebar.jpg')]
   bg-cover
   bg-center
-  to-[#3b82f6]
   text-white
   rounded-2xl
   shadow-md
   p-8
-  flex flex-col md:flex-row justify-between items-center gap-4
-"
-      style={{
-        backgroundImage: `url(${adminsidebar})`,
-      }}
-      >
+  flex flex-col md:flex-row justify-between items-center gap-4 
+">
 
 
       {/* LEFT SIDE */}
       <div className="text-white max-w-md">
 
         <h2 className="text-2xl font-bold">
-          Hello John!
+          Hello Jane!
         </h2>
 
         <p className="mt-3 text-sm opacity-90">
@@ -86,7 +80,7 @@ function WelcomeBanner() {
           text-white/80
           text-xs
         ">
-         <img src={illustration} alt="admin illustration" className="admin-illustration" />
+         <img src={illustration} alt="security illustration" className="security-illustration" />
         </div>
 
 
@@ -99,4 +93,4 @@ function WelcomeBanner() {
 
 }
 
-export default WelcomeBanner;
+export default SecurityWelcomeBanner;

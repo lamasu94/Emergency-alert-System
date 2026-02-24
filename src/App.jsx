@@ -1,10 +1,14 @@
 import Login from "./pages/Login.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import SecurityStaff from "./pages/securitystaff.jsx";
-import StudentStaff from "./pages/studentstaff.jsx";
+import StudentHome from "./pages/studentstaff.jsx";
 import UsersManagement from "./pages/usersManagment.jsx";
-
+import SecurityLayout from "./layouts/SecurityLayout.jsx";
+import SecurityAlerts from "./pages/Alerts.jsx";
+import SecuritySettings from "./pages/setting.jsx";
+import StudentLayout from "./layouts/UserLayout.jsx";
 import AdminLayout from "./layouts/AdminLayout.jsx";
+import StudentAlerts from "./pages/studentalert.jsx";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -12,27 +16,34 @@ function App() {
   return (
     <Routes>
 
-      {/* LOGIN */}
-      <Route path="/" element={<Login />} />
+  {/* LOGIN */}
+  <Route path="/" element={<Login />} />
 
-      {/* ADMIN LAYOUT (PARENT) */}
-      <Route path="/admin" element={<AdminLayout />}>
+  {/* ADMIN */}
+  <Route path="/admin" element={<AdminLayout />}>
+    <Route index element={<Dashboard />} />
+    <Route path="dashboard" element={<Dashboard />} />
+    <Route path="users" element={<UsersManagement />} />
+    <Route path="settings" element={<SecuritySettings />} />
+  </Route>
 
-        {/* DEFAULT PAGE */}
-        <Route index element={<Dashboard />} />
+  {/* SECURITY */}
+  <Route path="/security" element={<SecurityLayout />}>
+    <Route index element={<SecurityStaff />} />
+    <Route path="securitystaff" element={<SecurityStaff />} />
+    <Route path="alerts" element={<SecurityAlerts />} />
+    <Route path="settings" element={<SecuritySettings />} />
+  </Route>
 
-        {/* CHILD PAGES */}
-        <Route path="dashboard" element={<Dashboard />} />
+  {/* STUDENTS (no layout) */}
+  <Route path="/student" element={<StudentLayout />}>
+    <Route index element={<StudentHome />} />
+    <Route path="home" element={<StudentHome />} />
+    <Route path="alerts" element={<StudentAlerts />} />
+    
+  </Route>
 
-        <Route path="users" element={<UsersManagement />} />
-
-        <Route path="security" element={<SecurityStaff />} />
-
-        <Route path="students" element={<StudentStaff />} />
-
-      </Route>
-
-    </Routes>
+</Routes>
   );
 }
 
