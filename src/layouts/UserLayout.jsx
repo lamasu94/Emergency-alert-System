@@ -4,6 +4,7 @@ import securitysidebar from "../assets/securitysidebar.jpg";
 import student from "../assets/student.svg";
 import { LogOut, Bell, LayoutDashboard } from "lucide-react";
 
+
 function StudentLayout() {
   const navigate = useNavigate();
 
