@@ -7,7 +7,7 @@ export default function SecurityAlerts() {
   const [alerts, setAlerts] = useState([]);
 
   const fetchAlerts = () => {
-    fetch("http://localhost:3000/api/alerts")
+    fetch("http://localhost:3001/api/alerts")
       .then(res => res.json())
       .then(data => setAlerts(data))
       .catch(err => console.log(err));
@@ -22,7 +22,7 @@ export default function SecurityAlerts() {
   // RESOLVE FUNCTION
   const handleResolve = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/alerts/${id}`, {
+      const res = await fetch(`http://localhost:3001/api/alerts/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" }
       });
@@ -155,7 +155,7 @@ function AlertModal({ setShowModal, onCreated }) {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/alerts", {
+      const res = await fetch("http://localhost:3001/api/alerts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ type, location })
