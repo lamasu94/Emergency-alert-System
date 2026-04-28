@@ -7,8 +7,13 @@ const {
   resolveAlert
 } = require("../controllers/alertsController");
 
-router.post("/alerts", createAlert);
-router.get("/alerts", getAlerts);
-router.put("/alerts/:id", resolveAlert); // 🔥 important
+// CREATE ALERT
+router.post("/", createAlert);
+
+// GET ALERTS
+router.get("/", getAlerts);
+
+// RESOLVE ALERT
+router.put("/:id", resolveAlert);
 
 module.exports = router;

@@ -1,3 +1,4 @@
+import LandingPage from "./pages/LandingPage.jsx";
 import Login from "./pages/Login.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import SecurityStaff from "./pages/securitystaff.jsx";
@@ -16,34 +17,36 @@ function App() {
   return (
     <Routes>
 
-  {/* LOGIN */}
-  <Route path="/" element={<Login />} />
+      {/* LANDING PAGE */}
+      <Route path="/" element={<LandingPage />} />
 
-  {/* ADMIN */}
-  <Route path="/admin" element={<AdminLayout />}>
-    <Route index element={<Dashboard />} />
-    <Route path="dashboard" element={<Dashboard />} />
-    <Route path="users" element={<UsersManagement />} />
-    <Route path="settings" element={<SecuritySettings />} />
-  </Route>
+      {/* LOGIN */}
+      <Route path="/login" element={<Login />} />
 
-  {/* SECURITY */}
-  <Route path="/security" element={<SecurityLayout />}>
-    <Route index element={<SecurityStaff />} />
-    <Route path="securitystaff" element={<SecurityStaff />} />
-    <Route path="alerts" element={<SecurityAlerts />} />
-    <Route path="settings" element={<SecuritySettings />} />
-  </Route>
+      {/* ADMIN */}
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="users" element={<UsersManagement />} />
+        <Route path="settings" element={<SecuritySettings />} />
+      </Route>
 
-  {/* STUDENTS (no layout) */}
-  <Route path="/student" element={<StudentLayout />}>
-    <Route index element={<StudentHome />} />
-    <Route path="home" element={<StudentHome />} />
-    <Route path="alerts" element={<StudentAlerts />} />
-    
-  </Route>
+      {/* SECURITY */}
+      <Route path="/security" element={<SecurityLayout />}>
+        <Route index element={<SecurityStaff />} />
+        <Route path="securitystaff" element={<SecurityStaff />} />
+        <Route path="alerts" element={<SecurityAlerts />} />
+        <Route path="settings" element={<SecuritySettings />} />
+      </Route>
 
-</Routes>
+      {/* STUDENT / STAFF */}
+      <Route path="/student" element={<StudentLayout />}>
+        <Route index element={<StudentHome />} />
+        <Route path="home" element={<StudentHome />} />
+        <Route path="alerts" element={<StudentAlerts />} />
+      </Route>
+
+    </Routes>
   );
 }
 

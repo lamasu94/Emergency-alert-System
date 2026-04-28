@@ -4,7 +4,7 @@ function ActiveAlertsTable() {
 
   const [alerts, setAlerts] = useState([]);
 
-  // 🔹 Fetch alerts from backend
+  //  Fetch alerts from backend
   const fetchAlerts = () => {
     fetch("http://localhost:3000/api/alerts")
       .then((res) => res.json())
@@ -12,7 +12,7 @@ function ActiveAlertsTable() {
       .catch((err) => console.log(err));
   };
 
-  // 🔹 Load + auto refresh
+  //  Load + auto refresh
   useEffect(() => {
     fetchAlerts();
 
@@ -23,12 +23,12 @@ function ActiveAlertsTable() {
     return () => clearInterval(interval);
   }, []);
 
-  // 🔹 Filter only ACTIVE alerts
+  //  Filter only ACTIVE alerts
   const activeAlerts = alerts.filter(
     (alert) => alert.status === "Active"
   );
 
-  // 🔹 Status color
+  //  Status color
   function getStatusColor(status) {
     if (status === "Active")
       return "bg-red-100 text-red-600";

@@ -35,10 +35,10 @@ function Login() {
         return;
       }
 
-      // ✅ Save user info to localStorage
+      //  Save user info to localStorage
       localStorage.setItem("user", JSON.stringify(data.user));
 
-      // ✅ Redirect based on role from DB
+      //   Redirect based on role from DB
       const role = data.user.role;
 
       if (role === "admin") {
@@ -88,7 +88,7 @@ function Login() {
             required
           /><br />
 
-          {/* ✅ Error message */}
+          {/*  Error message */}
           {error && (
             <p style={{ color: "red", marginBottom: "10px", fontSize: "14px" }}>
               {error}

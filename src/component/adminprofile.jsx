@@ -68,8 +68,8 @@ function AdminProfileCard() {
       <div className="flex space-x-3 mt-4">
 
         <button className="
-          bg-orange-800
-          hover:bg-orange-700
+          bg-gradient-to-r from-[#1E3A5F] via-[#112240] to-[#0a1628]
+          hover:bg-[#112240]
           text-white
           px-4
           py-2

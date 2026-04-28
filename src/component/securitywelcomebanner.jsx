@@ -11,9 +11,7 @@ function SecurityWelcomeBanner() {
   return (
 
     <div className="
-      bg-[url('/src/assets/securitysidebar.jpg')]
-  bg-cover
-  bg-center
+  bg-gradient-to-r from-[#0a1628] to-[#112240]
   text-white
   rounded-2xl
   shadow-md
@@ -35,8 +33,8 @@ function SecurityWelcomeBanner() {
 
         <button className="
           mt-5
-          bg-orange-700
-          hover:bg-orange-500
+          bg-emerald-700
+          hover:bg-emerald-800
           text-white
           px-4
           py-2

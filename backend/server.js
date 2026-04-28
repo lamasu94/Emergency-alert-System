@@ -5,21 +5,23 @@ require("./models/db");
 
 const app = express();
 
-// ✅ CORS and JSON must be FIRST, before ALL routes
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Routes AFTER middleware
+// Routes
 const alertRoutes = require("./routes/alertsRoute");
-app.use("/api", alertRoutes);
-
 const userRoutes = require("./routes/usersRoute");
-app.use("/api", userRoutes);
 
+app.use("/api/alerts", alertRoutes);
+app.use("/api/users", userRoutes);
+
+// Test route
 app.get("/", (req, res) => {
-    res.send("Emergency Alert Backend Running");
+  res.send("Emergency Alert Backend Running");
 });
 
+// Start server
 app.listen(3000, () => {
-    console.log("Server running on port 3000");
+  console.log("Server running on port 3000");
 });

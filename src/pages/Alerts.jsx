@@ -19,7 +19,7 @@ export default function SecurityAlerts() {
     return () => clearInterval(interval);
   }, []);
 
-  // ✅ RESOLVE FUNCTION
+  // RESOLVE FUNCTION
   const handleResolve = async (id) => {
     try {
       const res = await fetch(`http://localhost:3000/api/alerts/${id}`, {
@@ -43,14 +43,14 @@ export default function SecurityAlerts() {
   const currentAlerts = activeTab === "active" ? activeAlerts : pastAlerts;
 
   return (
-    <div className="min-h-screen bg-emerald-50 p-4 md:p-6">
+    <div className="min-h-screen bg-gray-50 p-4 md:p-6">
 
       {/* HEADER */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6 gap-4">
         <h1 className="text-2xl font-bold text-gray-800">Security Alerts</h1>
         <button
           onClick={() => setShowModal(true)}
-          className="bg-emerald-700 hover:bg-emerald-800 text-white px-5 py-2 rounded-xl shadow"
+          className="bg-[#1E3A5F] hover:bg-[#112240] text-white px-5 py-2 rounded-xl shadow"
         >
           + Create Alert
         </button>
@@ -62,7 +62,7 @@ export default function SecurityAlerts() {
           onClick={() => setActiveTab("active")}
           className={`px-4 py-2 rounded-xl ${
             activeTab === "active"
-              ? "bg-emerald-700 text-white"
+              ? "bg-[#1E3A5F] text-white"
               : "bg-white text-gray-700 shadow"
           }`}
         >
@@ -72,7 +72,7 @@ export default function SecurityAlerts() {
           onClick={() => setActiveTab("past")}
           className={`px-4 py-2 rounded-xl ${
             activeTab === "past"
-              ? "bg-emerald-700 text-white"
+              ? "bg-[#1E3A5F] text-white"
               : "bg-white text-gray-700 shadow"
           }`}
         >
@@ -83,13 +83,13 @@ export default function SecurityAlerts() {
       {/* TABLE */}
       <div className="bg-white rounded-2xl shadow overflow-hidden">
         <table className="w-full">
-          <thead className="bg-emerald-100 text-gray-700">
+          <thead className="bg-blue-100 text-gray-700">
             <tr>
               <th className="text-left p-4">Type</th>
               <th className="text-left p-4">Location</th>
               <th className="text-left p-4">Time</th>
               <th className="text-left p-4">Status</th>
-              {/* ✅ Only show Action column on Active tab */}
+              {/*  Only show Action column on Active tab */}
               {activeTab === "active" && (
                 <th className="text-left p-4">Action</th>
               )}
@@ -114,12 +114,12 @@ export default function SecurityAlerts() {
                     {alert.status}
                   </span>
                 </td>
-                {/* ✅ Resolve button only on Active tab */}
+                {/*  Resolve button only on Active tab */}
                 {activeTab === "active" && (
                   <td className="p-4">
                     <button
                       onClick={() => handleResolve(alert.id)}
-                      className="bg-emerald-700 hover:bg-emerald-800 text-white px-3 py-1 rounded-lg text-sm"
+                      className="bg-blue-300 hover:bg-blue-800 text-white px-3 py-1 rounded-lg text-sm"
                     >
                       Resolve
                     </button>

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import studentIllustration from "../assets/studentIllustration.svg";
-import securitysidebar from "../assets/securitysidebar.jpg";
+
 
 function StudentBanner() {
 
@@ -13,22 +13,13 @@ function StudentBanner() {
   return (
 
     <div className="
-     bg-cover
-    bg-center
-      rounded-2xl
-      shadow-md
-      p-6
-      md:p-8
-      flex
-      items-center
-      justify-between
-      flex-col
-      md:flex-row
-      gap-6
-    "
-    style={{
-            backgroundImage: `url(${securitysidebar})`,
-          }}>
+  bg-gradient-to-r from-[#0a1628] to-[#112240]
+  text-white
+  rounded-2xl
+  shadow-md
+  p-8
+  flex flex-col md:flex-row justify-between items-center gap-4 
+">
 
       {/* LEFT SIDE */}
       <div className="text-white">
@@ -54,8 +45,8 @@ function StudentBanner() {
         <button
           onClick={goToAlerts}
           className="
-            bg-orange-500
-            hover:bg-orange-600
+            bg-emerald-700
+            hover:bg-emerald-800
             text-white
             px-5
             py-2

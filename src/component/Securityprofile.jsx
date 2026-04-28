@@ -49,7 +49,7 @@ function SecurityProfileCard() {
       {/* STATUS */}
       <div className="mt-2 flex items-center space-x-2">
 
-        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
 
         <span className="text-sm text-gray-500">
           {admin.status}
@@ -68,8 +68,8 @@ function SecurityProfileCard() {
       <div className="flex space-x-3 mt-4">
 
         <button className="
-          bg-gradient-to-r from-[#0f3d2e] via-[#14532d] to-[#1f7a43]
-          hover:bg-emerald-700
+          bg-gradient-to-r from-[#1E3A5F] via-[#112240] to-[#0a1628]
+          hover:bg-[#112240]
           text-white
           px-4
           py-2

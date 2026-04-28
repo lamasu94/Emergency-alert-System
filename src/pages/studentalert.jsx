@@ -5,7 +5,7 @@ export default function StudentAlerts() {
   const [activeTab, setActiveTab] = useState("active");
   const [alerts, setAlerts] = useState([]);
 
-  // ✅ FETCH ALERTS FROM BACKEND
+  //  FETCH ALERTS FROM BACKEND
   const fetchAlerts = () => {
     fetch("http://localhost:3000/api/alerts")
       .then(res => res.json())
@@ -13,7 +13,7 @@ export default function StudentAlerts() {
       .catch(err => console.log(err));
   };
 
-  // ✅ LOAD + AUTO REFRESH EVERY 3 SECONDS
+  //  LOAD + AUTO REFRESH EVERY 3 SECONDS
   useEffect(() => {
     fetchAlerts();
     const interval = setInterval(fetchAlerts, 3000);
@@ -36,7 +36,7 @@ export default function StudentAlerts() {
           onClick={() => setActiveTab("active")}
           className={`px-4 py-2 rounded-xl ${
             activeTab === "active"
-              ? "bg-emerald-700 text-white"
+              ? "bg-[#1E3A5F] text-white"
               : "bg-white text-gray-700 shadow"
           }`}
         >
@@ -47,7 +47,7 @@ export default function StudentAlerts() {
           onClick={() => setActiveTab("past")}
           className={`px-4 py-2 rounded-xl ${
             activeTab === "past"
-              ? "bg-emerald-700 text-white"
+              ? "bg-[#1E3A5F] text-white"
               : "bg-white text-gray-700 shadow"
           }`}
         >
@@ -58,7 +58,7 @@ export default function StudentAlerts() {
       {/* DESKTOP TABLE */}
       <div className="hidden md:block bg-white rounded-2xl shadow overflow-hidden">
         <table className="w-full">
-          <thead className="bg-emerald-100 text-gray-700">
+          <thead className="bg-blue-100 text-gray-700">
             <tr>
               <th className="text-left p-4">Type</th>
               <th className="text-left p-4">Location</th>
