@@ -10,7 +10,7 @@ function UsersManagement() {
 
   // FETCH USERS
   const fetchUsers = () => {
-    fetch("http://localhost:3000/api/users")
+    fetch("http://localhost:3001/api/users")
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.log(err));
@@ -30,7 +30,7 @@ function UsersManagement() {
     if (!window.confirm("Delete this user?")) return;
 
     try {
-      const res = await fetch(`http://localhost:3000/api/users/${id}`, {
+      const res = await fetch(`http://localhost:3001/api/users/${id}`, {
         method: "DELETE",
       });
 
@@ -48,7 +48,7 @@ function UsersManagement() {
   const handleUpdate = async () => {
     try {
       const res = await fetch(
-        `http://localhost:3000/api/users/${editUser.id}`,
+        `http://localhost:3001/api/users/${editUser.id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

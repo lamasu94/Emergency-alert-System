@@ -1,7 +1,8 @@
-const db = require("../models/db");
+const { getDb } = require("../models/db");
 
 // CREATE ALERT
 exports.createAlert = (req, res) => {
+  const db = getDb();
   const { type, location } = req.body;
 
   if (!type || !location) {
@@ -18,14 +19,13 @@ exports.createAlert = (req, res) => {
       console.error(err);
       return res.status(500).json({ error: "Database error" });
     }
-
     res.status(201).json({ message: "Alert created successfully" });
   });
 };
 
-
 // GET ALERTS
 exports.getAlerts = (req, res) => {
+  const db = getDb();
   const query = "SELECT * FROM alerts ORDER BY created_at DESC";
 
   db.query(query, (err, results) => {
@@ -33,14 +33,13 @@ exports.getAlerts = (req, res) => {
       console.error(err);
       return res.status(500).json({ error: "Database error" });
     }
-
     res.json(results);
   });
 };
 
-
 // RESOLVE ALERT
 exports.resolveAlert = (req, res) => {
+  const db = getDb();
   const { id } = req.params;
 
   const query = `
@@ -50,7 +49,6 @@ exports.resolveAlert = (req, res) => {
   `;
 
   db.query(query, [id], (err, result) => {
-
     if (err) {
       console.error(err);
       return res.status(500).json({ error: "Database error" });
@@ -61,6 +59,5 @@ exports.resolveAlert = (req, res) => {
     }
 
     res.json({ message: "Alert resolved" });
-
   });
 };

@@ -1,6 +1,7 @@
-const db = require("../models/db");
+const { getDb } = require("../models/db");
 
 exports.createUser = (req, res) => {
+  const db = getDb();
   const { name, email, password, role, phone } = req.body;
 
   if (!name || !email || !password || !role) {
@@ -17,11 +18,12 @@ exports.createUser = (req, res) => {
       console.log(err);
       return res.status(500).send("Error creating user");
     }
-
     res.send("User created successfully");
   });
 };
+
 exports.getUsers = (req, res) => {
+  const db = getDb();
   const sql = "SELECT * FROM users";
 
   db.query(sql, (err, results) => {
@@ -29,11 +31,12 @@ exports.getUsers = (req, res) => {
       console.log(err);
       return res.status(500).send("Error fetching users");
     }
-
     res.json(results);
   });
 };
-   exports.loginUser = (req, res) => {
+
+exports.loginUser = (req, res) => {
+  const db = getDb();
   const { email, password } = req.body;
 
   const query = "SELECT * FROM users WHERE email = ? AND password = ?";
@@ -49,14 +52,13 @@ exports.getUsers = (req, res) => {
     }
 
     const user = results[0];
-
-    //  Don't send password back to frontend
     delete user.password;
-
     res.json({ user });
   });
 };
+
 exports.deleteUser = (req, res) => {
+  const db = getDb();
   const id = req.params.id;
 
   const sql = "DELETE FROM users WHERE id = ?";
@@ -66,11 +68,12 @@ exports.deleteUser = (req, res) => {
       console.error(err);
       return res.status(500).send("Error deleting user");
     }
-
     res.send("User deleted");
   });
 };
+
 exports.updateUser = (req, res) => {
+  const db = getDb();
   const id = req.params.id;
   const { name, phone } = req.body;
 
@@ -81,7 +84,6 @@ exports.updateUser = (req, res) => {
       console.error(err);
       return res.status(500).send("Error updating user");
     }
-
     res.send("User updated");
   });
 };

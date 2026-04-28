@@ -8,7 +8,7 @@ function SystemStatus() {
   //  FETCH ACTIVE ALERTS COUNT
   useEffect(() => {
     const fetchStatus = () => {
-      fetch("http://localhost:3000/api/alerts")
+      fetch("http://localhost:3001/api/alerts")
         .then(res => res.json())
         .then(data => {
           const active = data.filter(a => a.status === "Active").length;

@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Environment variables
+.env
+
+# Docker volumes
+mysql_data/
+
+# Backend node_modules (in case it has its own)
+backend/node_modules/
+
+# Frontend node_modules
+frontend/node_modules/

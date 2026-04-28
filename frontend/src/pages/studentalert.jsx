@@ -7,7 +7,7 @@ export default function StudentAlerts() {
 
   //  FETCH ALERTS FROM BACKEND
   const fetchAlerts = () => {
-    fetch("http://localhost:3000/api/alerts")
+    fetch("http://localhost:3001/api/alerts")
       .then(res => res.json())
       .then(data => setAlerts(data))
       .catch(err => console.log(err));

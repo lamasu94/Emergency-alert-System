@@ -14,7 +14,7 @@ export default function AddUserForm({ onClose, onUserAdded }) {
   };
 
   const handleSubmit = async () => {
-    const res = await fetch("http://localhost:3000/api/users", {
+    const res = await fetch("http://localhost:3001/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
