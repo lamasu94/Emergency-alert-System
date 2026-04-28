@@ -1,6 +1,5 @@
 import { User, Globe, Monitor, Shield, Lock } from "lucide-react";
 import femaleAvatar from "../assets/femaleAvatar.svg";
-import ssettingsbg3 from "../assets/ssettingsbg3.jpg";
 
 export default function SecuritySettings() {
   return (
@@ -11,9 +10,7 @@ export default function SecuritySettings() {
       bg-center
       p-4 sm:p-6     
     "
-    style={{
-              backgroundImage: `url(${ssettingsbg3})`,
-            }}
+  
     >
       {/* CENTER CONTAINER */}
       <div className="
@@ -51,7 +48,7 @@ export default function SecuritySettings() {
               mx-auto
               mb-4
               border-4
-              border-emerald-100
+              border-blue-100
             "
           />
 
@@ -63,8 +60,8 @@ export default function SecuritySettings() {
 
           <button
             className="
-            bg-emerald-700
-            hover:bg-emerald-800
+            bg-[#1E3A5F]
+            hover:bg-[#112240]
             text-white
             px-4 sm:px-5
             py-2
@@ -104,7 +101,7 @@ function SettingItem({ icon, title }) {
       items-center
       justify-between
       p-4
-      hover:bg-emerald-50
+      hover:bg-blue-100
       cursor-pointer
       transition
       border-b
@@ -112,7 +109,7 @@ function SettingItem({ icon, title }) {
     "
     >
       <div className="flex items-center gap-3">
-        <div className="text-emerald-700">{icon}</div>
+        <div className="text-blue-700">{icon}</div>
 
         <span className="text-sm sm:text-base font-medium text-gray-700">
           {title}

@@ -1,5 +1,4 @@
 import { Outlet, Link, useNavigate } from "react-router-dom";
-import adminsidebar from "../assets/adminsidebar.jpg";
 import maleAvatar from "../assets/maleAvatar.svg";
 import {
   LayoutDashboard,
@@ -22,24 +21,24 @@ function AdminLayout() {
 
   return (
 
-    <div className="flex min-h-screen bg-[#f0fdf4]">
+    <div className="flex min-h-screen bg-gray-50">
 
       {/* SIDEBAR */}
       <aside
-        className={`
-          fixed top-0 left-0 h-screen w-64
-          bg-cover bg-center text-white
-          rounded-r-2xl shadow-lg z-50
-          flex flex-col
+  className={`
+    fixed top-0 left-0 h-screen w-64
+    bg-gradient-to-b from-[#0a1628] to-[#112240]
+    text-white
+    rounded-r-2xl shadow-lg z-50
+    flex flex-col
 
-          transform transition-transform duration-300
+    transform transition-transform duration-300
 
-          ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
+    ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
 
-          md:translate-x-0 md:static
-        `}
-        style={{ backgroundImage: `url(${adminsidebar})` }}
-      >
+    md:translate-x-0 md:fixed md:top-0 md:left-0 md:h-screen
+  `}
+>
 
         {/* CLOSE BUTTON (mobile only) */}
         <button
@@ -99,10 +98,10 @@ function AdminLayout() {
 
 
       {/* RIGHT SIDE */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col md:ml-64">
 
         {/* NAVBAR */}
-        <header className="h-16 bg-white shadow flex items-center justify-between px-4 md:px-6">
+        <header className="sticky top-0 z-30 h-16 bg-white shadow flex items-center justify-between px-4 md:px-6">
 
           {/* LEFT */}
           <div className="flex items-center gap-3">
@@ -138,8 +137,8 @@ function AdminLayout() {
             <button
               onClick={handleLogout}
               className="
-                bg-orange-700
-                hover:bg-orange-500
+                bg-emerald-700
+                hover:bg-emerald-800
                 text-white
                 text-sm
                 px-4
@@ -159,7 +158,7 @@ function AdminLayout() {
         {/* PAGE CONTENT */}
         <main className="flex-1 p-4 md:p-6 overflow-x-hidden">
           <Outlet />
-        </main>
+        </main>  
 
 
       </div>

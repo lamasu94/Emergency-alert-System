@@ -56,3 +56,32 @@ exports.getUsers = (req, res) => {
     res.json({ user });
   });
 };
+exports.deleteUser = (req, res) => {
+  const id = req.params.id;
+
+  const sql = "DELETE FROM users WHERE id = ?";
+
+  db.query(sql, [id], (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Error deleting user");
+    }
+
+    res.send("User deleted");
+  });
+};
+exports.updateUser = (req, res) => {
+  const id = req.params.id;
+  const { name, phone } = req.body;
+
+  const sql = "UPDATE users SET name = ?, phone = ? WHERE id = ?";
+
+  db.query(sql, [name, phone, id], (err, result) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Error updating user");
+    }
+
+    res.send("User updated");
+  });
+};

@@ -1,5 +1,5 @@
 import illustration from "../assets/dashboardbanner.svg";
-import adminsidebar from "../assets/adminsidebar.jpg";
+
 function WelcomeBanner() {
 
   const activeAlerts = 3;
@@ -12,20 +12,13 @@ function WelcomeBanner() {
   return (
 
     <div className="
-  
-  bg-cover
-  bg-center
-  to-[#3b82f6]
+  bg-gradient-to-r from-[#0a1628] to-[#112240]
   text-white
   rounded-2xl
   shadow-md
   p-8
-  flex flex-col md:flex-row justify-between items-center gap-4
-"
-      style={{
-        backgroundImage: `url(${adminsidebar})`,
-      }}
-      >
+  flex flex-col md:flex-row justify-between items-center gap-4 
+">
 
 
       {/* LEFT SIDE */}
@@ -41,8 +34,8 @@ function WelcomeBanner() {
 
         <button className="
           mt-5
-          bg-orange-700
-          hover:bg-orange-500
+          bg-emerald-700
+          hover:bg-emerald-800
           text-white
           px-4
           py-2
