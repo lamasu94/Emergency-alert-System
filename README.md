@@ -35,7 +35,7 @@ A simple web-based emergency alert system built for managing and monitoring emer
 
 # 🛠️ Technologies Used
 
-| Technology | Logo                                                                                        |
+
 | ---------- | ------------------------------------------------------------------------------------------- |
 | React      | ![React](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg)       |
 | Node.js    | ![NodeJS](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg)    |
