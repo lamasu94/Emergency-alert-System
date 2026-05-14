@@ -33,16 +33,17 @@ A simple web-based emergency alert system built for managing and monitoring emer
 
 ---
 
+
 # 🛠️ Technologies Used
 
-
-| ---------- | ------------------------------------------------------------------------------------------- |
-| React      | ![React](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg)       |
-| Node.js    | ![NodeJS](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg)    |
-| Express.js | ![Express](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg) |
-| MySQL      | ![MySQL](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg)       |
-| Docker     | ![Docker](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg)    |
-| GitHub     | ![GitHub](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg)    |
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" height="40"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" height="40"/>
+</p>
 
 ---
 
@@ -64,7 +65,7 @@ emergency-alert-system/
 ## 1. Clone the Repository
 
 ```bash
-git clone <your-repository-link>
+git clone https://github.com/lamasu94/Emergency-alert-System
 ```
 
 ---
