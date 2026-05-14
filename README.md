@@ -3,14 +3,21 @@
 A simple web-based emergency alert system built for managing and monitoring emergency incidents in real time.
 
 ---
+📸 System Preview
 
-#  System Preview
+<img width="1919" height="985" alt="image" src="https://github.com/user-attachments/assets/8c5a1e8e-f734-4b33-9128-1eb44e3cd149" />
 
-Add your screenshots here:
+<img width="1919" height="984" alt="image" src="https://github.com/user-attachments/assets/81413d8f-6f41-4f1d-b998-0b38ee49a260" />
 
-* Dashboard Screenshot
-* Alerts Page Screenshot
-* Login Page Screenshot
+<img width="1887" height="995" alt="image" src="https://github.com/user-attachments/assets/6a4c9514-43a0-4f11-bfcd-18d37107f47c" />
+
+<img width="1530" height="649" alt="image" src="https://github.com/user-attachments/assets/8e3d94f1-24e7-457a-b908-3f42a2372b70" />
+
+
+
+
+
+
 
 ---
 
@@ -90,8 +97,7 @@ docker-compose up --build
 
 # 📌 Main Functionalities
 
-* Users can create alerts
-* Security staff can resolve alerts
+* Security staff can create & resolve alerts
 * Dashboard displays active incidents
 * System stores data in MySQL database
 * Docker Compose runs the full system together
